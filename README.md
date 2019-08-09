@@ -1,24 +1,50 @@
-# README
+# _Specialty Store - Ruby Independent Project Four_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ A independent project for the Ruby course for the coding school, Epicodus, written on August 9, 2019.
 
-Things you may want to cover:
+#### By _**Daniel Hongel**_
 
-* Ruby version
+## Description
 
-* System dependencies
+This application is an independent coding project from a Ruby coding class at Epicodus. This application is intended to demonstrate an understanding of Ruby and the Rails framework. This is a website an online store that carries specialty products.
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* _Clone this repository_
+* _Open terminal and type 'git clone [git link]'_
+* _Navigate to project directory using cd in terminal_
+* _Open project in text editor (atom .)_
+* _Type 'bundle install' in terminal to load Gems_
+* _To run tests, type 'rspec' in terminal_
+* _To run the program, type ruby app.rb in terminal_
+* _Open your preferred web browser and navigate to localhost:4567_
 
-* Database initialization
+## Specs
 
-* How to run the test suite
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+||||
+||||
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Known Bugs
 
-* ...
+No known bugs
+
+## Support and contact details
+
+Please contact me if you encounter issues with this program, have suggestions, or would like to contribute to this or future projects. I can be reached at:  fatherofdharma@gmail.com.
+
+## Technologies Used
+
+* Ruby
+* RubyGems
+* Atom
+* GitHub
+* Postgres
+* Rails
+
+### License
+_This software is licensed under MIT license._
+
+Copyright (c) 2019 **_Daniel Hongel_**

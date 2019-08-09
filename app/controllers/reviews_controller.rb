@@ -16,6 +16,14 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def show
+    @product = Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+    render :show
+  end
+
+  end
+
   private
     def review_params
       params.require(:review).permit(:author, :content_body, :rating)

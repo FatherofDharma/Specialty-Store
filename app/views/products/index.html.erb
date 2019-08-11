@@ -3,11 +3,11 @@
 <% if @products.any? %>
 <ul>
   <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product)%></li>
+    <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
   <% end %>
 </ul>
 <% else %>
   <p>There are no products yet.</p>
 <% end %>
 
-<p><%= link_to "Add a new product", new_product_path%></p>
+<p><%= link_to "Add a new product", new_product_path, class:"hyperlinks"%></p>

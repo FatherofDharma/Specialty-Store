@@ -9,16 +9,16 @@
   <% @product.reviews.each do |review| %>
     <ul>
       <li><%= review.author %> says: <%= review.content_body %> They give this product a rating of <%= review.rating %></li>
-      <li><%= link_to "edit this review", edit_product_review_path(@product, review)%></li>
+      <li><%= link_to "edit this review", edit_product_review_path(@product, review), class:"hyperlinks"%></li>
     </ul>
   <% end %>
 <% else %>
   <p>There are no reviews for this product.</p>
 <% end %>
 
-<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+<p><%= link_to "Add a review", new_product_review_path(@product), class:"hyperlinks"%></p>
 
-<p><%= link_to "Edit product", edit_product_path(@product) %></p>
+<p><%= link_to "Edit product", edit_product_path(@product), class:"hyperlinks"%></p>
 <p><%= link_to "Delete product", product_path(@product),
-                                  :data => {:confirm => "Are you certain that you want to delete this product entry?", :method => "delete"} %></p>
-<p><%= link_to "Return to browsing the product list", products_path %></p>
+                                  :data => {:confirm => "Are you certain that you want to delete this product entry?", :method => "delete"}, class:"hyperlinks"%></p>
+<p><%= link_to "Return to browsing the product list", products_path, class:"hyperlinks"%></p>

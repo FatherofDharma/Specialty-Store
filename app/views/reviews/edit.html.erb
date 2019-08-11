@@ -1,0 +1,16 @@
+<h1>Edit review for: <%= @product.name %></h1>
+<h3>Review: <%= @review.content_body %></h3>
+<%= form_for [@product, @review] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <%= f.label :content_body %>
+  <%= f.text_area :content_body %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+
+  <%= f.submit  %>
+<% end %>
+
+<p><%= link_to "Delete review", product_review_path(@product, @review),
+                                  :data => {:confirm => "Are you certain that you want to delete this review?", :method => "delete"} %></p>
+<p>Return to the product page for: <%= link_to @product.name, product_path(@product)%></p>

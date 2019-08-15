@@ -3,5 +3,5 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :cost, presence: true
-  validates :rating, presence: true
+  validates :country_of_origin, presence: true
 end

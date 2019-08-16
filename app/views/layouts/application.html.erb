@@ -7,14 +7,14 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+
   </head>
 
   <body>
-    <div class="jumbotron">
-
-        <p>Home</p>
-
+    <div class="container">
+      <nav>
+        <p><%= link_to "Home", root_path, class:"hyperlinks"%></p>
+      </nav>
     </div>
     <div class="container">
 <!-- a solution that I learned on my stack underflow project with my pair, H.D. -->

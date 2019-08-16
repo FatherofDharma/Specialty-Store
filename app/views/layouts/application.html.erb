@@ -7,9 +7,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
   </head>
 
   <body>
+<!-- a solution that I learned on my stack underflow project with my pair, H.D. -->
+    <% if flash[:alert] %>
+      <div class=" <%= flash[:alert]["class"] %>">
+        <%= flash[:alert]["content"] %>
+      </div>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class=" <%= flash[:notice]["class"] %>">
+        <%= flash[:notice]["content"] %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

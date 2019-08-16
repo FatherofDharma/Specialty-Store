@@ -13,8 +13,10 @@ class ProductsController< ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
+      flash[:notice] = {:content => "Product was successfully added to the list!", :class =>"alert alert-success"}
       redirect_to products_path
     else
+      flash[:alert] = {:content => "Error! Product was not added to the list!", :class =>"alert alert-danger"}
       render :new
     end
   end

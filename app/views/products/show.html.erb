@@ -8,8 +8,9 @@
   <h4>User reviews:</h4>
   <% @product.reviews.each do |review| %>
     <ul>
-      <li><%= review.author %> says: <%= review.content_body %> They give this product a rating of <%= review.rating %></li>
-      <li><%= link_to "edit this review", edit_product_review_path(@product, review), class:"hyperlinks"%></li>
+      <a href="/products/<%= @product.id %>/reviews/<%= review.id %>/edit" class="hyperlinks">
+      <li><div class="container"><%= review.author %> says: <%= review.content_body %> They give this product a rating of <%= review.rating %></div></li>
+      </a>
     </ul>
   <% end %>
 <% else %>

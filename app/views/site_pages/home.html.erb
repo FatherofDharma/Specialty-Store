@@ -1,5 +1,17 @@
 <h1>Welcome to Mario's Specialty Knives!</h1>
 
 <h3>For a list of our current knives, please click the link below to browse.</h3>
-
 <p><%= link_to "Product List", products_path, class:"hyperlinks"%></p>
+
+
+
+<% if @products.any? %>
+  <h3>Here are our three newest products!</h3>
+  <% @products.three_most_recent.each do |product| %>
+    <ul>
+      <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>There are no recent products.</p>
+<% end %>

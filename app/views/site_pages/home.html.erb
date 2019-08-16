@@ -26,3 +26,14 @@
 <% else %>
   <p>There are no recent products.</p>
 <% end %>
+
+<% if @products.any? %>
+  <h3>Here are products only made in the USA!</h3>
+  <% @products.made_in_usa.each do |product| %>
+    <ul>
+      <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>There are no USA products.</p>
+<% end %>

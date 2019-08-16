@@ -5,12 +5,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
+    <div class="jumbotron">
+
+        <p>Home</p>
+
+    </div>
+    <div class="container">
 <!-- a solution that I learned on my stack underflow project with my pair, H.D. -->
     <% if flash[:alert] %>
       <div class=" <%= flash[:alert]["class"] %>">
@@ -24,5 +30,6 @@
     <% end %>
 
     <%= yield %>
+    </div>
   </body>
 </html>

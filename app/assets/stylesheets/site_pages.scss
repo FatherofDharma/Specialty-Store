@@ -2,11 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.jumbotron {
+  background-color: red;
+}
+
 body {
-  background-color: rgb(98, 77, 97);
+  // background-color: black;
   color: rgb(82, 188, 191);
 }
 
 .hyperlinks{
-  color: white;
+  color: orange;
 }

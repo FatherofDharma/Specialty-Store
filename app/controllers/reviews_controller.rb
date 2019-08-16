@@ -10,8 +10,10 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
     if @review.save
+      flash[:notice] = {:content => "Review was successfully created!", :class =>"alert alert-success"}
       redirect_to product_path(@product)
     else
+      flash[:alert] = {:content => "Error! Review was not created!", :class =>"alert alert-danger"}
       render :new
     end
   end

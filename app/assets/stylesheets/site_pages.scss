@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.jumbotron {
-  background-color: red;
+.nav-header p {
+  display: inline;
+}
+
+.product_name {
+  color: black;
 }
 
 body {

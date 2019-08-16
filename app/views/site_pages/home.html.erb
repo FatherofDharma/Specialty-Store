@@ -16,7 +16,7 @@
   <p>There are no recent products.</p>
 <% end %>
 
-<% if @products.any? %>
+<% if @products.most_reviews.any? %>
   <h3>Here are our most reviewed products!</h3>
   <% @products.most_reviews.each do |product| %>
     <ul>
@@ -27,7 +27,7 @@
   <p>There are no recent products.</p>
 <% end %>
 
-<% if @products.any? %>
+<% if @products.made_in_usa.any? %>
   <h3>Here are products only made in the USA!</h3>
   <% @products.made_in_usa.each do |product| %>
     <ul>

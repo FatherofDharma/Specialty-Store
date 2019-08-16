@@ -15,3 +15,14 @@
 <% else %>
   <p>There are no recent products.</p>
 <% end %>
+
+<% if @products.any? %>
+  <h3>Here are our most reviewed products!</h3>
+  <% @products.most_reviews.each do |product| %>
+    <ul>
+      <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>There are no recent products.</p>
+<% end %>

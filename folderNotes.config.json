@@ -7,7 +7,8 @@
     "app/controllers": "CONTROLLERS",
     "config": "CONFIG-ROUTES",
     "db": "DB",
-    "spec": "SPEC"
+    "spec": "SPEC",
+    "app/models": "MODELS"
   }
 
 }

@@ -23,7 +23,7 @@ This application is an independent coding project from a Ruby coding class at Ep
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-||||
+|validates a new product only requiring all fields to be filled in|New product: Name: Kukri, Cost $50, Country of Origin: " " | Will throw an error and not create new product|
 ||||
 
 
@@ -41,7 +41,7 @@ Please contact me if you encounter issues with this program, have suggestions, o
 * RubyGems
 * Atom
 * GitHub
-* Postgres
+* PostgreSQL
 * Rails
 
 ### License

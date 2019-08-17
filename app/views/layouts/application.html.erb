@@ -7,14 +7,16 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
   </head>
 
   <body>
     <div class="container">
       <nav class="nav-header">
-        <p><%= link_to "Home", root_path, class:"hyperlinks"%></p>
-        <p><%= link_to "Products", products_path, class:"hyperlinks"%></p>
+        <p>|<%= link_to "Home", root_path, class:"hyperlinks"%></p>
+        <p>|<%= link_to "Products", products_path, class:"hyperlinks"%></p>
+        <p>|<%= link_to "Add a new product", new_product_path, class:"hyperlinks"%></p>
+        |
       </nav>
     </div>
     <div class="container">

@@ -3,9 +3,8 @@
 <p>Cost: $ <%= @product.cost %> dollars</p>
 <p>This product is from <%= @product.country_of_origin %></p>
 
-<h3>Reviews:</h3>
 <% if @product.reviews.any? %>
-  <h4>User reviews:</h4>
+  <h3>User reviews:</h3>
   <% @product.reviews.each do |review| %>
     <ul>
       <a href="/products/<%= @product.id %>/reviews/<%= review.id %>/edit" class="hyperlinks">
@@ -16,10 +15,13 @@
 <% else %>
   <p>There are no reviews for this product.</p>
 <% end %>
+<div class ="container">
+  <nav class ="nav-footer">
+    <p><%= link_to "Add a review", new_product_review_path(@product), class:"footer-links"%></p>
 
-<p><%= link_to "Add a review", new_product_review_path(@product), class:"hyperlinks"%></p>
-
-<p><%= link_to "Edit product", edit_product_path(@product), class:"hyperlinks"%></p>
-<p><%= link_to "Delete product", product_path(@product),
-                                  :data => {:confirm => "Are you certain that you want to delete this product entry?", :method => "delete"}, class:"hyperlinks"%></p>
-<p><%= link_to "Return to browsing the product list", products_path, class:"hyperlinks"%></p>
+    <p><%= link_to "Edit product", edit_product_path(@product), class:"footer-links"%></p>
+    <p><%= link_to "Delete product", product_path(@product),
+                                      :data => {:confirm => "Are you certain that you want to delete this product entry?", :method => "delete"}, class:"footer-links"%></p>
+    <p><%= link_to "Return to browsing the product list", products_path, class:"footer-links"%></p>
+  </nav>
+</div>

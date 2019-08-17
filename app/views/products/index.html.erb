@@ -1,13 +1,30 @@
+<div class="container">
+  <nav class="nav-header">
+    <p>|<%= link_to "Add a new product", new_product_path, class:"hyperlinks"%></p>
+    |
+  </nav>
+</div>
 <h1>Products</h1>
 
-<% if @products.any? %>
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
-  <% end %>
-</ul>
-<% else %>
-  <p>There are no products yet.</p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="column-md-6">
 
-<p><%= link_to "Add a new product", new_product_path, class:"hyperlinks"%></p>
+      <% if @products.any? %>
+
+      <ul>
+
+        <% @products.each do |product| %>
+          <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
+        <% end %>
+      </ul>
+      <% else %>
+        <p>There are no products yet.</p>
+      <% end %>
+
+    </div>
+    <div class="column-md-6">
+      <p>Second column</p>
+    </div>
+  </div>
+</div>

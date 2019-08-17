@@ -6,6 +6,10 @@
   display: inline;
 }
 
+.nav-footer p {
+  display: inline;
+  color: black;
+}
 .product_name {
   color: black;
 }
@@ -18,3 +22,12 @@ body {
 .hyperlinks{
   color: orange;
 }
+
+.row {
+  display: flex;
+}
+// #product-show {
+//   width: 50%;
+//   height: 300px;
+//   background-color: red;
+// }

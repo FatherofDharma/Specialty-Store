@@ -10,7 +10,7 @@ require 'faker'
 Product.destroy_all
 
 45.times do
-  product_name = Faker::Ancient.god
+  product_name = Faker::Games::Witcher.unique.monster
   product_cost = rand(25..150)
   product_country = Faker::Address.country
   product = Product.new(:name => product_name, :cost => product_cost, :country_of_origin => product_country)
@@ -25,7 +25,7 @@ Product.destroy_all
 end
 
 rand(5..10).times do
-  product_name = Faker::Ancient.god
+  product_name = Faker::Games::Witcher.unique.monster
   product_cost = rand(25..150)
   product_country = "USA"
   product = Product.new(:name => product_name, :cost => product_cost, :country_of_origin => product_country)

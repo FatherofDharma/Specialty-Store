@@ -5,7 +5,7 @@
   <div class="row">
     <div class="column-md-2, product-col">
       <% if @products.any? %>
-        <h5>Here are our three newest products!</h5>
+        <h5>Our three newest products!</h5>
         <% @products.three_most_recent.each do |product| %>
           <ul>
             <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
@@ -17,7 +17,7 @@
     </div>
     <div class="column-md-5, product-col">
       <% if @products.most_reviews.any? %>
-        <h5>Here are our most reviewed products!</h5>
+        <h5>Our most reviewed products!</h5>
         <% @products.most_reviews.each do |product| %>
           <ul>
             <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>
@@ -29,7 +29,7 @@
     </div>
     <div class="column-md-5, product-col">
       <% if @products.made_in_usa.any? %>
-        <h5>Here are products only made in the USA!</h5>
+        <h5>Products only made in the USA!</h5>
         <% @products.made_in_usa.each do |product| %>
           <ul>
             <li><%= link_to product.name, product_path(product), class:"hyperlinks"%></li>

@@ -3,11 +3,11 @@
 <p>Cost: $ <%= @product.cost %> dollars</p>
 <p>This product is from <%= @product.country_of_origin %></p>
 
-<h3>User reviews:</h3>
+<div class="container, review-show">
+<h3>User Reviews:</h3>
   <% if @product.reviews.any? %>
-  <div class="container, review-show">
       <% @product.reviews.each do |review| %>
-      <ul>
+        <ul>
           <a href="/products/<%= @product.id %>/reviews/<%= review.id %>/edit" class="hyperlinks">
           <li><div class="container"><%= review.author %> says: <%= review.content_body %> They give this product a rating of <%= review.rating %></div></li>
           </a>

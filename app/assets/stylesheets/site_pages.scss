@@ -15,10 +15,11 @@
 }
 .product-col {
   float: left;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 2.5em;
+  margin-right: 2em;
   background-color: black;
-  color: white;
+  color: orange;
+  padding: 1em;
 }
 
 body {
@@ -43,9 +44,13 @@ body {
   column-count: 6;
   column-width: auto;
   column-gap: 1em;
+  color: orange;
+  padding: 1em;
   background-color: black;
 }
 
 .review-show {
-  backgroud-color: black;
+  color: orange;
+  background-color: black;
+  padding: 1em;
 }

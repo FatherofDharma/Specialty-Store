@@ -17,7 +17,8 @@
   float: left;
   margin-left: 1em;
   margin-right: 1em;
-  background-color: blue;
+  background-color: black;
+  color: white;
 }
 
 body {
@@ -29,6 +30,11 @@ body {
   color: orange;
 }
 
+.footer-links {
+  color: black;
+}
+
+
 // .row h3{
 //   font-size: ;
 // }
@@ -37,5 +43,9 @@ body {
   column-count: 6;
   column-width: auto;
   column-gap: 1em;
-  background-color: blue;
+  background-color: black;
+}
+
+.review-show {
+  backgroud-color: black;
 }

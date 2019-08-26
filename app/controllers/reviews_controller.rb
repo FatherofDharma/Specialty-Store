@@ -27,8 +27,10 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     if @review.update(review_params)
+      flash[:notice] = {:content => "Review was successfully updated!", :class =>"alert alert-success"}
       redirect_to product_path(@review.product)
     else
+      flash[:alert] = {:content => "Error! Review was not updated!", :class =>"alert alert-danger"}
     render :edit
     end
   end
@@ -41,8 +43,14 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    @review.destroy
-    redirect_to product_path(@review.product)
+    if @review.destroy
+      flash[:notice] = {:content => "Review was successfully updated!", :class =>"alert alert-success"}
+      redirect_to product_path(@review.product)
+    else
+      flash[:alert] = {:content => "Error! Review was not deleted!", :class =>"alert alert-danger"}
+      redirect_to product_path(@revew.product)
+    end
+
   end
 
   private

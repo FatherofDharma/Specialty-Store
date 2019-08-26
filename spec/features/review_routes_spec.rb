@@ -50,4 +50,16 @@ describe "review routes testing", {:type => :feature} do
     expect(page).to have_content("I hate this thing! It's the worst knife, I have ever owned! Also, the site is terrible!")
   end
 
+  it "Deletes a review" do
+    test_product = Product.new({:name => 'Super Kukri', :cost => 45, :country_of_origin => 'Turkey'})
+    test_product.save
+    product_id = test_product.id.to_i
+    test_review = test_product.reviews.create({:author => "Bobby", :content_body => "I love this thing! It's the best knife, I have ever owned! Also, the site is great!", :rating => 4})
+    test_product.save
+    visit "/products/#{test_product.id}/reviews/#{test_review.id}/edit"
+    click_link("Delete review")
+    expect(page).to_not have_content('Review was successfully deleted!')
+
+  end
+
 end

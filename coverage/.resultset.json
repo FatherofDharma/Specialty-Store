@@ -29,8 +29,20 @@
         1,
         1,
         1,
+        null,
+        null,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -382,8 +394,8 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null,
         1,
@@ -520,7 +532,7 @@
         null,
         1,
         1,
-        5,
+        7,
         null,
         null
       ],
@@ -546,6 +558,18 @@
         null,
         1,
         1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/danielhongel/Desktop/specialty_store/spec/features/review_routes_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -612,6 +636,6 @@
         null
       ]
     },
-    "timestamp": 1566788572
+    "timestamp": 1566789183
   }
 }

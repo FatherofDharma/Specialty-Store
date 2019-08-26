@@ -17,6 +17,16 @@ describe "product routes testing", {:type => :feature} do
     expect(page).to have_content('Product was successfully added to the list!')
   end
 
+  it "visits a product page" do
+    test_product = Product.new({:name => 'Super Kukri', :cost => 45, :country_of_origin => 'Turkey'})
+    test_product.save
+    product_id = test_product.id.to_i
+    rest_review = test_product.reviews.create({:author => "Bobby", :content_body => "I love this thing! It's the best knife, I have ever owned! Also, the site is great!", :rating => 4})
+    test_product.save
+    visit "/products/#{test_product.id}"
+    expect(page).to have_content("I love this thing! It's the best knife, I have ever owned! Also, the site is great!")
+  end
+
   it "updates a product" do
     test_product = Product.new({:name => 'Super Kukri', :cost => 45, :country_of_origin => 'Turkey'})
     test_product.save

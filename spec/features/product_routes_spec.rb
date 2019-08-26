@@ -17,8 +17,7 @@ describe "product routes testing", {:type => :feature} do
     expect(page).to have_content('Product was successfully added to the list!')
   end
 
-  it "updates a new product" do
-
+  it "updates a product" do
     test_product = Product.new({:name => 'Super Kukri', :cost => 45, :country_of_origin => 'Turkey'})
     test_product.save
     product_id = test_product.id.to_i
@@ -28,6 +27,16 @@ describe "product routes testing", {:type => :feature} do
     fill_in('Country of origin', :with => 'USA')
     click_button('Update Product')
     expect(page).to have_content('Product was successfully updated!')
+  end
+
+  it "deletes a product" do
+    test_product = Product.new({:name => 'Super Kukri', :cost => 45, :country_of_origin => 'Turkey'})
+    test_product.save
+    product_id = test_product.id.to_i
+    visit "/products/#{test_product.id}"
+    click_link('Delete product')
+    page.accept_confirm { click_button "OK" }
+    expect(page).to have_content('Product was successfully deleted!')
   end
 
 end

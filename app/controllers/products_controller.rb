@@ -34,16 +34,23 @@ class ProductsController< ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
+      flash[:notice] = {:content => "Product was successfully updated!", :class =>"alert alert-success"}
       redirect_to products_path
     else
+      flash[:alert] = {:content => "Error! Product was not updated!", :class =>"alert alert-danger"}
       render :edit
     end
   end
 
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy
-    redirect_to products_path
+    if @product.destroy
+      flash[:notice] = {:content => "Product was successfully deleted!", :class =>"alert alert-success"}
+      redirect_to products_path
+    else
+      flash[:alert] = {:content => "Error! Product was not deleted!", :class =>"alert alert-danger"}
+      redirect_to product_path
+    end
   end
 
   private
